@@ -1,0 +1,255 @@
+.editor,
+table {
+    margin-top: 10px;
+}
+
+.dk-editor {
+    position: relative;
+
+}
+
+button,
+table th {
+    font-weight: 700
+}
+
+table th,
+table tr:hover {
+    background-color: #f1f1f1
+}
+
+.editor,
+.toolbar {
+    border: 1px solid #ddd;
+    padding: 10px
+}
+
+body {
+    font-family: Arial, sans-serif
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    background: #f4f4f4
+}
+
+.editor {
+    min-height: 500px;
+    font-size: 16px;
+    overflow: auto
+}
+
+.editor[contenteditable=true] {
+    outline: 0
+}
+
+.code-highlight {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 5px;
+    display: inline-block
+}
+
+button {
+    border: 1px solid #d3d3d3;
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 5px
+}
+
+button:hover {
+    transform: scale(1.08)
+}
+
+#headingSelector,
+#languageSelector {
+    border: 1px solid #f5f5f5;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 5px
+}
+
+
+.align {
+    position: relative;
+    z-index: 999;
+}
+
+.set-table {
+    position: relative;
+    z-index: 999;
+}
+
+#table-options {
+    position: absolute;
+    top: 105%;
+    padding: 5px;
+    z-index: 999;
+    left: 4px;
+    border: 1px solid #ddd;
+    border-radius: 0 10px 10px;
+    background: #fff !important
+}
+
+#table-options input,
+#table-options button {
+    height: 40px;
+}
+
+#alignment-options {
+    position: absolute;
+    top: 105%;
+    padding: 5px;
+    z-index: 999;
+    left: 4px;
+    border: 1px solid #ddd;
+    border-radius: 0 10px 10px;
+    background: #fff !important
+}
+
+.show {
+    display: grid !important;
+    gap: 1px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: .5s ease-out forwards slideIn;
+    grid-template-columns: repeat(6, 1fr)
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+table td,
+table th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px
+}
+
+table td[contenteditable=true] {
+    background-color: #f9f9f9;
+    cursor: text
+}
+
+@media screen and (max-width: 400) {
+    .toolbar {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr)
+    }
+}
+
+.table-button-select {
+    height: 15px !important;
+    width: 15px !important;
+    display: flex;
+    padding: 2px !important;
+    border-radius: 0 !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-button-select i {
+    font-size: 10px;
+}
+
+.highlighted {
+    background-color: blue !important;
+    color: white;
+}
+
+blockquote {
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    /* Blue left border */
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    color: #555;
+    line-height: 1.2;
+    quotes: "“" "”" "‘" "’";
+}
+
+blockquote p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 3em;
+    color: #007BFF;
+    /* Blue quote mark */
+    vertical-align: -0.5em;
+    margin-right: 10px;
+}
+
+blockquote::after {
+    content: close-quote;
+    font-size: 3em;
+    color: #007BFF;
+    /* Blue quote mark */
+    vertical-align: -0.5em;
+    margin-left: 10px;
+}
+
+
+
+.powered {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid grey;
+    background-color: lightgrey;
+    padding: 3px;
+}
+
+.showImageUploadFeature {
+    display: grid !important;
+    gap: 1px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: .5s ease-out forwards slideIn;
+}
+
+.set-imageUpload {
+    position: relative;
+    z-index: 999;
+}
+.upload{
+
+}
+
+#upload-options{
+    position: absolute;
+    top: 105%;
+    padding: 5px;
+    z-index: 999;
+    left: 4px;
+    border: 1px solid #ddd;
+    border-radius: 0 10px 10px;
+    background: #fff !important
+}
+
+
+.image-input{
+    width: 100px;
+}
